@@ -1,5 +1,5 @@
 class Admin::ArticlesController < AdminController
-  before_action :set_article, only: [:edit, :update, :destroy]
+  before_action :set_article, only: [:edit, :hide, :publish, :update, :destroy]
 
   def index
     @articles = Article.all.paginate(page: params[:page] || 1, per_page: 50).order(:created_at => :desc)
@@ -21,6 +21,26 @@ class Admin::ArticlesController < AdminController
   end
 
   def edit
+  end
+
+  def publish
+    respond_to do |format|
+      if @article.update(published: true)
+        format.html { redirect_to admin_articles_path, notice: 'Article was successfully published.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
+  def hide
+    respond_to do |format|
+      if @article.update(published: false)
+        format.html { redirect_to admin_articles_path, notice: 'Article was successfully unpublished.' }
+      else
+        format.html { render :edit }
+      end
+    end
   end
 
   def update

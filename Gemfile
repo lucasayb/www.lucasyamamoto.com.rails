@@ -25,6 +25,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.8', '>= 4.8.1'
 # will_paginate provides a simple API for performing paginated queries with Active Record
 gem 'will_paginate', '~> 3.3', '>= 3.3.1'
+# Image analysis and transformations also require the image_processing gem. 
+gem "image_processing", ">= 1.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,28 @@
+<h1>Listagem artigos</h1>
+<%= notice %>
+<table>
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Data de criação</th>
+      <th>Data de atualização</th>
+      <th colspan="3">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.created_at %></td>
+        <td><%= article.updated_at %></td>
+        <% if article.published? %>
+          <td><%= link_to "Esconder", admin_hide_article_path(article), method: :post %></td>
+        <% else %>
+          <td><%= link_to "Publicar", admin_publish_article_path(article), method: :post %></td>
+        <% end %>
+        <td><%= link_to "Editar", edit_admin_article_path(article) %></td>
+        <td><%= link_to "Deletar", admin_article_path(article), method: :delete, data: { confirm: "Você tem certeza?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
