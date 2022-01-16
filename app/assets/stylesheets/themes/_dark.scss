@@ -42,5 +42,14 @@
         }
       }
     }
+    .navbar {
+      &-main {
+        background: $dark-background-color;
+        box-shadow: 2px 0 2px 2px $dark-box-shadow-color;
+      }
+      &-background {
+        background-color: $dark-navbar-background-color;
+      }
+    }
   }
 }

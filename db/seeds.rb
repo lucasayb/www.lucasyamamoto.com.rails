@@ -14,3 +14,9 @@
     thumbnail_url: 'https://www.lucasyamamoto.com/assets/images/2018-06-21-7-dicas-para-a-integracao-perfeita/Integra%C3%A7%C3%B5es.jpg'
   )
 end
+
+Page.create(
+  title: 'Sobre',
+  permalink: 'sobre',
+  content: '<p>Sou um desenvolvedor Web e CTO da <a href="https://codeby.com.br">CodeBy</a>. Busco estar por dentro das tecnologias no mercado de e-commercee programação no geral, sempre focando em me renovar e buscar porsoluções úteis e práticas para mim e para as empresas para as quaisprestamos serviços.</p><p>Está precisando de algum serviço para seu e-commerce? Acesse <a href="https://codeby.com.br">CodeBy</a> e entre em contato conosco!</p>'
+)

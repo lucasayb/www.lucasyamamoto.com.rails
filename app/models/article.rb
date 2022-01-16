@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   extend FriendlyId
+  has_rich_text :content
   friendly_id :title, use: :slugged, slug_column: :permalink
   
   has_many :article_categories, dependent: :destroy

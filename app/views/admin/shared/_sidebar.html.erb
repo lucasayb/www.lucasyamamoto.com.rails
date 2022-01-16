@@ -1,0 +1,47 @@
+<aside>
+  <ul>
+    <li><%= link_to "Home", admin_root_path %></li>
+    <li>
+      <span class="menu-label">Artigos</span>
+      <ul>
+        <li><%= link_to "Novo Artigo", new_admin_article_path %></li>
+        <li><%= link_to "Listar Artigos", admin_articles_path %></li>
+      </ul>
+    </li>
+    <li>
+      <span class="menu-label">Cursos</span>
+      <ul>
+        <li><%= link_to "Novo Curso", new_admin_page_path %></li>
+        <li><%= link_to "Listar Cursos", admin_pages_path %></li>
+      </ul>
+    </li>
+    <li>
+      <span class="menu-label">Vídeos</span>
+      <ul>
+        <li><%= link_to "Novo Vídeo", new_admin_page_path %></li>
+        <li><%= link_to "Listar Vídeos", admin_pages_path %></li>
+      </ul>
+    </li>
+    <li>
+      <span class="menu-label">Páginas</span>
+      <ul>
+        <li><%= link_to "Novo Página", new_admin_page_path %></li>
+        <li><%= link_to "Listar Páginas", admin_pages_path %></li>
+      </ul>
+    </li>
+    <li>
+      <span class="menu-label">Categorias</span>
+      <ul>
+        <li><%= link_to "Novo Categoria", new_admin_category_path %></li>
+        <li><%= link_to "Listar Categorias", admin_categories_path %></li>
+      </ul>
+    </li>
+    <li>
+      <span class="menu-label">Tags</span>
+      <ul>
+        <li><%= link_to "Novo Tag", new_admin_tag_path %></li>
+        <li><%= link_to "Listar Tags", admin_tags_path %></li>
+      </ul>
+    </li>
+  </ul>
+</aside>

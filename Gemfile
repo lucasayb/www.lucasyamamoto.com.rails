@@ -21,6 +21,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'friendly_id', '~> 5.4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.8', '>= 4.8.1'
+# will_paginate provides a simple API for performing paginated queries with Active Record
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

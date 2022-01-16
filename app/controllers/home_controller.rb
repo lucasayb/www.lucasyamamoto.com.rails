@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.all.order(:created_at => :desc)
+    @articles = Article.all.paginate(page: params[:page], per_page: 8).order(:created_at => :desc)
   end
 end

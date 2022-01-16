@@ -1,6 +1,8 @@
-<ul>
-  <li></li>
-  <li>LGPDY</li>
-  <li></li>
-  <li></li>
-</ul>
+<nav class="navbar-main">
+  <ul>
+    <% @pages.each do |page| %>
+      <li><%= link_to page.title, page.permalink %></li>
+    <% end %>
+  </ul>
+</nav>
+<div class="navbar-background"></div>
