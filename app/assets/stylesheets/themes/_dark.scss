@@ -1,0 +1,46 @@
+.theme- {
+  &-dark {
+    background: $dark-background-color;
+    .hamburguer-icon {
+      &-line-1,
+      &-line-2,
+      &-line-3 {
+        background-color: $dark-primary-color;
+      }
+    }
+    .header-main {
+      .site-title {
+        color: $dark-primary-text-color;
+      }
+    }
+    .welcome {
+      border-color: $dark-primary-color;
+      color: $dark-primary-text-color;
+    }
+    .homepage-title {
+      color: $dark-primary-color;
+    }
+    .article-summary {
+      &-thumb {
+        background: $dark-thumb-shadow-color;
+        box-shadow: 0 2px 2px 2px $dark-box-shadow-color;
+      }
+      &-title {
+        color: $dark-primary-text-color;
+      }
+      &-date {
+        background: $date-background-color;
+        box-shadow: 0 2px 2px 2px $dark-box-shadow-color;
+        color: $dark-background-color;
+      }
+      &-reading-time {
+        &-label {
+          color: $dark-primary-text-color;
+        }
+        &-text {
+          color: $dark-primary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.article-summary {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (min-width: 1024px) {
+    width: 25%;
+  }
+  &:hover {
+    .article-summary-thumb {
+      img {
+        opacity: 0.6;
+        -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0);
+      }
+    }
+  }
+  &-thumb {
+    img {
+      vertical-align: middle;
+      opacity: 0.2;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      transition: all 0.5s;
+    }
+  }
+  &-thumb, &-thumb img {
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  &-title {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  &-reading-time {
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    width: 100%;
+  }
+  &-date {
+    border-radius: 10px;
+    font-size: 11px;
+    padding: 5px 8px 5px 28px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    &::before {
+      content: "";
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAb0lEQVRIiWNgGEDwH4opUsdENecQaYEXAwPDYwZUF/0ngJHVPWZgYPDEZyHMcErwI3wWEBvuROuneRyw4HEJVcCA+YCRTPMwfE73fDBqwagFoxYwMDyB0uQW1QwMkCIfJ/BkgJTnlNQFHmR4dCQDANUzSCCVfYedAAAAAElFTkSuQmCC') center center no-repeat;
+      width: 14px;
+      height: 14px;
+      background-size: 100%;
+      position: absolute;
+      left: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

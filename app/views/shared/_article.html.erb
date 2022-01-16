@@ -1,0 +1,13 @@
+<%= link_to article_path(article), class: "article-summary" do %>
+  <div class="article-summary-thumb"><%= image_tag article.thumbnail_url, alt: article.title %></div>
+  <span class="article-summary-date">
+    <%= time_tag article.created_at do %>
+      <%= article.created_at.strftime('%d/%m/%Y') %>
+    <% end %>
+  </span>
+  <h3 class="article-summary-title"><%= article.title %></h3>
+  <div class="article-summary-reading-time">
+    <span class="article-summary-reading-time-label">Tempo médio de leitura: </span>
+    <span class="article-summary-reading-time-text"><%= article.reading_time %> minutos</span>
+  </div>
+<% end %>

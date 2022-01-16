@@ -1,0 +1,16 @@
+<%= render partial: "shared/header" %>
+<%= render partial: "shared/welcome" %>
+
+<div class="container">
+  <h1 class="homepage-title">Confira meus últimos textos</h1>
+</div>
+
+<div class="container">
+  <div class="articles">
+    <% @articles.each do |article| %>
+      <%= render partial: "shared/article", locals: { article: article } %>
+    <% end %>
+  </div>
+</div>
+
+<%#= render partial: "shared/about" %>

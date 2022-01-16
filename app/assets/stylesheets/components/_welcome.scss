@@ -1,0 +1,16 @@
+.welcome {
+  border-left-width: 4px;
+  border-left-style: solid;
+  margin: 0 10px;
+  padding-left: 15px;
+  padding-right: 5px;
+  padding-top: 2px;
+  h2, p {
+    margin: 0 0 10px 0;
+  }
+  p {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 100;
+  }
+}
